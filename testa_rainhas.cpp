@@ -13,3 +13,9 @@ TEST_CASE("Teste 2 -sem damas") {
     Rainhas t2(tabuleiro);
     assert(t2.solucao() == -1);
 }
+
+TEST_CASE("Teste 3 -Tamanho errado") {
+    vector<string> tabuleiro = {"00101000", "01000000","00000010","01000000","00000010","10000000","000000100"};
+    Rainhas t3(tabuleiro);
+    assert(t3.solucao() == -1);
+}
