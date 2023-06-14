@@ -29,6 +29,9 @@ public:
     int ChecaTudo();
     /// @brief verifica se há mais de uma rainha em cada coluna
     /// @return retorna 1 se houver mais de uma rainha na coluna ou 0 se nao tiver
-    bool checarColuna();      
+    bool checarColuna();
+    /// @brief verifica se há mais de uma rainha em cada linha
+    /// @return retorna 1 se houver mais de uma linha na coluna ou 0 se nao tiver    
+    bool checarLinha();   
 };
 #endif  // RAINHAS_HPP_

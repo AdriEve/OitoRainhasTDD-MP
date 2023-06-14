@@ -16,11 +16,19 @@ bool Rainhas::checarColuna() {
     return true;
 }
 
+bool Rainhas::checarLinha() {
+    for (auto i : tabuleiro) {
+        if (count(i.begin(), i.end(), '1') > 1) {
+            return false;
+        }
+    }
+    return true;
+}
 
 int Rainhas::ChecaTudo() {
     int resultadofinal=0;
-    resultadofinal += checarColuna();
-    if (resultadofinal== 1) {
+    resultadofinal += checarColuna()+ checarLinha();
+    if (resultadofinal== 2) {
          return 1;
     } else {
          return 0;
