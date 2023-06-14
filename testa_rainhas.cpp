@@ -49,3 +49,28 @@ TEST_CASE("Teste 8 - Duas damas diagonal esquerda") {
     Rainhas t8(tabuleiro);
     assert(t8.solucao() == 0);
 }
+
+TEST_CASE("Teste 9 - Usando arquivo") {
+    ifstream arquivo("teste_8_rainhas.txt");
+
+    if (arquivo.is_open()) {
+        string linha;
+        string lin1, lin2, lin3, lin4, lin5, lin6, lin7, lin8;
+        while (getline(arquivo, linha)) {
+            lin1 << linha;
+            lin2 << linha;
+            lin3 << linha;
+            lin4 << linha;
+            lin5 << linha;
+            lin6 << linha;
+            lin7 << linha;
+            lin8 << linha;
+
+        }
+
+        arquivo.close();
+    }
+    vector<string> tabuleiro = {"lin1", "lin2","lin3", "lin4", "lin5", "lin6", "lin7", "lin8"};
+    Rainhas t8(tabuleiro);
+    assert(t8.solucao() == 0);
+}
