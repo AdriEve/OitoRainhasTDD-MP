@@ -78,7 +78,7 @@ bool Rainhas::checarDiagonalDireita() {
     return diagonal.size() == tabuleiro.size();
 }
 
-bool Rainhas::chcarDiagonalEsquerda() {
+bool Rainhas::checarDiagonalEsquerda() {
     vector<int> lin, col;
     unordered_set<int> diagonal;
     for (int linha = 0; linha < 8; linha++) {

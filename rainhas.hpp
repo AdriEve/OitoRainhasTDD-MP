@@ -42,7 +42,7 @@ public:
     bool checarDiagonalDireita();
     /// @brief verifica se há mais de uma rainha em cada diagonal esquerdas
     /// @return retorna 1 se houver mais de uma rainha na diagonal ou 0 se nao tiver 
-    bool chcarDiagonalEsquerda();
+    bool checarDiagonalEsquerda();
     /// @brief Converte vetor ataque em um arquivo ataques
     /// @return arquivo com os ataques
     void ataques();

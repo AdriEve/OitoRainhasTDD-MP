@@ -75,5 +75,5 @@ TEST_CASE("Teste 9 - Usando arquivo") {
 TEST_CASE("Teste 10 - multiplos erros") {
     vector<string> tabuleiro = {"01001000", "01000001","10000100", "00001000", "00010100", "00010010", "00000100", "00100000"};
     Rainhas t10(tabuleiro);
-    assert(t10.solucao() == 0);
+    assert(t10.solucao() == -1);
 }
