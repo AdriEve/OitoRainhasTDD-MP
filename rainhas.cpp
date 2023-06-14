@@ -86,6 +86,17 @@ bool Rainhas::chcarDiagonalEsquerda() {
             char p = tabuleiro[linha][coluna];
             if (p == '1') {
                 diagonal.insert(linha + coluna);
+                lin.push_back(linha);
+                col.push_back(coluna);
+            }
+        }
+    }
+    for (int a = 0; a < 8; a++) {
+        for (int b = 0; b < 8; b++) {
+            if (a != b) {
+                if (lin[a] - col[a] == lin[b] - col[b]) {
+                    ataque.push_back(to_string(lin[b]) + "," +to_string(col[b]));
+                }
             }
         }
     }
