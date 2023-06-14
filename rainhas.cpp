@@ -38,6 +38,19 @@ bool Rainhas::checarDiagonalDireita() {
     return diagonal.size() == tabuleiro.size();
 }
 
+bool Rainhas::chcarDiagonalEsquerda() {
+    unordered_set<int> diagonal;
+    for (int linha = 0; linha < 8; linha++) {
+        for (int coluna = 0; coluna < 8; coluna++) {
+            char p = tabuleiro[linha][coluna];
+            if (p == '1') {
+                diagonal.insert(linha + coluna);
+            }
+        }
+    }
+    return diagonal.size() == tabuleiro.size();
+}
+
 int Rainhas::ChecaTudo() {
     int resultadofinal=0;
     resultadofinal += checarColuna()+ checarLinha() +checarDiagonalDireita();
