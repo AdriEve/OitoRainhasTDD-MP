@@ -23,6 +23,12 @@ public:
     Rainhas(vector<string> tabuleiro) : tabuleiro(tabuleiro) {}
     /// @brief verifica se a entrada está vazia e verifica a quantidade de rainhas no tabuleiro
     /// @return se a entrada é valida
-    int solucao();        
+    int solucao();
+    /// @brief função que irá chamar as outras funçoes para checar colunas linhas e diagonais
+    /// @return resultado das funçoes juntas
+    int ChecaTudo();
+    /// @brief verifica se há mais de uma rainha em cada coluna
+    /// @return retorna 1 se houver mais de uma rainha na coluna ou 0 se nao tiver
+    bool checarColuna();      
 };
 #endif  // RAINHAS_HPP_
