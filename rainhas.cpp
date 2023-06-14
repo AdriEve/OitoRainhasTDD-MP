@@ -43,23 +43,35 @@ bool Rainhas::checarLinha() {
     for (auto i : tabuleiro) {
         if (count(i.begin(), i.end(), '1') > 1) {
              for (int j=0; j<8; j++){
-                    if (i[j]=='1')
-                        ataque.push_back((to_string(cont) + "," + to_string(j)));
+                if (i[j]=='1')
+                    ataque.push_back((to_string(cont) + "," + to_string(j)));
                 }
                 funciona= false;
             }
         cont++;
         }
-        return funciona;
+    return funciona;
 }
 
 bool Rainhas::checarDiagonalDireita() {
+    vector<int> lin, col;
     unordered_set<int> diagonal;
     for (int linha = 0; linha < 8; linha++) {
         for (int coluna = 0; coluna < 8; coluna++) {
             char p = tabuleiro[linha][coluna];
             if (p == '1') {
                 diagonal.insert(linha - coluna);
+                lin.push_back(linha);
+                col.push_back(coluna);
+            }
+        }
+    }
+    for (int a = 0; a < 8; a++) {
+        for (int b = 0; b < 8; b++) {
+            if (a != b) {
+                if (lin[a] - col[a] == lin[b] - col[b]) {
+                    ataque.push_back(to_string(lin[b]) + "," +to_string(col[b]));
+                }
             }
         }
     }
@@ -67,6 +79,7 @@ bool Rainhas::checarDiagonalDireita() {
 }
 
 bool Rainhas::chcarDiagonalEsquerda() {
+    vector<int> lin, col;
     unordered_set<int> diagonal;
     for (int linha = 0; linha < 8; linha++) {
         for (int coluna = 0; coluna < 8; coluna++) {
