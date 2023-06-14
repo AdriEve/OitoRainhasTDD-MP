@@ -11,7 +11,7 @@ int Rainhas::solucao() {
         contaRainhas += count(i.begin(), i.end(), '1');
         contaTamanho++;
     }
-    if (contaRainhas != 8 || contaTamanho != 8) {
+    if (contaRainhas != 8 || contaTamanho != 8) { // teste 3
         return -1;
     }
     return +1;
