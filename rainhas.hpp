@@ -31,8 +31,10 @@ public:
     /// @return retorna 1 se houver mais de uma rainha na coluna ou 0 se nao tiver
     bool checarColuna();
     /// @brief verifica se há mais de uma rainha em cada linha
-    /// @return retorna 1 se houver mais de uma linha na coluna ou 0 se nao tiver    
+    /// @return retorna 1 se houver mais de uma linha na linha ou 0 se nao tiver    
     bool checarLinha();
+    /// @brief verifica se há mais de uma rainha em cada diagonal direitas
+    /// @return retorna 1 se houver mais de uma diagonal na diagonal ou 0 se nao tiver    
     bool checarDiagonalDireita();
 };
 #endif  // RAINHAS_HPP_
