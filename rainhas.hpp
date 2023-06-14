@@ -32,6 +32,7 @@ public:
     bool checarColuna();
     /// @brief verifica se há mais de uma rainha em cada linha
     /// @return retorna 1 se houver mais de uma linha na coluna ou 0 se nao tiver    
-    bool checarLinha();   
+    bool checarLinha();
+    bool checarDiagonalDireita();
 };
 #endif  // RAINHAS_HPP_

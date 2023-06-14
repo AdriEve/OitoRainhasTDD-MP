@@ -25,10 +25,23 @@ bool Rainhas::checarLinha() {
     return true;
 }
 
+bool Rainhas::checarDiagonalDireita() {
+    unordered_set<int> diagonal;
+    for (int linha = 0; linha < 8; linha++) {
+        for (int coluna = 0; coluna < 8; coluna++) {
+            char p = tabuleiro[linha][coluna];
+            if (p == '1') {
+                diagonal.insert(linha - coluna);
+            }
+        }
+    }
+    return diagonal.size() == tabuleiro.size();
+}
+
 int Rainhas::ChecaTudo() {
     int resultadofinal=0;
-    resultadofinal += checarColuna()+ checarLinha();
-    if (resultadofinal== 2) {
+    resultadofinal += checarColuna()+ checarLinha() +checarDiagonalDireita();
+    if (resultadofinal== 3) {
          return 1;
     } else {
          return 0;

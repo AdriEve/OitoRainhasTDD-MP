@@ -32,7 +32,7 @@ TEST_CASE("Teste 5 -damas na mesma linha") {
     assert(t5.solucao() == 0);
 }
 
-TEST_CASE("Teste 6 - Duas damas na mesma diagonal direita") {
+TEST_CASE("Teste 6 - Duas damas diagonal direita") {
     vector<string> tabuleiros = {"10000000", "00000001", "01000000", "00001000", "00010000", "00000010", "00000100", "00100000"};
     Rainhas t6(tabuleiros);
     assert(t6.solucao() == 0);
