@@ -38,12 +38,19 @@ bool Rainhas::checarColuna() {
     }
 
 bool Rainhas::checarLinha() {
+    bool funciona=true;
+    int cont=0;
     for (auto i : tabuleiro) {
         if (count(i.begin(), i.end(), '1') > 1) {
-            return false;
+             for (int j=0; j<8; j++){
+                    if (i[j]=='1')
+                        ataque.push_back((to_string(cont) + "," + to_string(j)));
+                }
+                funciona= false;
+            }
+        cont++;
         }
-    }
-    return true;
+        return funciona;
 }
 
 bool Rainhas::checarDiagonalDireita() {
