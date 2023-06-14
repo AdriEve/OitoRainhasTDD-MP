@@ -21,7 +21,7 @@ private:
     vector<string> tabuleiro;
 public:
     Rainhas(vector<string> tabuleiro) : tabuleiro(tabuleiro) {}
-    /// @brief verifica se a entrada está vazia
+    /// @brief verifica se a entrada está vazia e verifica a quantidade de rainhas no tabuleiro
     /// @return se a entrada é valida
     int solucao();        
 };
