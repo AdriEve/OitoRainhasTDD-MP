@@ -20,6 +20,8 @@ private:
     /// @brief confere se a entrada é valida 
     /// @param tabuleiro entrada a ser validada
     vector<string> tabuleiro;
+    /// @brief guarda ataques
+    /// @param ataque ataques a serem salvos
     vector<string> ataque;
 public:
     Rainhas(vector<string> tabuleiro) : tabuleiro(tabuleiro) {}
@@ -41,6 +43,8 @@ public:
     /// @brief verifica se há mais de uma rainha em cada diagonal esquerdas
     /// @return retorna 1 se houver mais de uma rainha na diagonal ou 0 se nao tiver 
     bool chcarDiagonalEsquerda();
+    /// @brief Converte vetor ataque em um arquivo ataques
+    /// @return arquivo com os ataques
     void ataques();
 
 };
