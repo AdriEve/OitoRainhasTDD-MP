@@ -2,7 +2,7 @@
 #include "rainhas.hpp"
 
 void Rainhas::ataques(){
-    ofstream arquivo("ataque.txt");
+    ofstream arquivo("ataques.txt");
     if(arquivo.is_open()) {
         for(int i=0; i<ataque.size(); i++){
             if(i%2==0)
