@@ -25,3 +25,9 @@ TEST_CASE("Teste 4 -damas na mesma coluna") {
     Rainhas t4(tabuleiro);
     assert(t4.solucao() == 0);
 }
+
+TEST_CASE("Teste 5 -damas na mesma linha") {
+    vector<string> tabuleiro = {"10000001", "00000000", "01000000", "00000100","00100000", "00000010","00010000", "00000001"};
+    Rainhas t5(tabuleiro);
+    assert(t5.solucao() == 0);
+}
