@@ -1,20 +1,41 @@
 // Copyright [2023] <Adriele>
 #include "rainhas.hpp"
 
+void Rainhas::ataques(){
+    ofstream arquivo("ataque.txt");
+    if(arquivo.is_open()) {
+        for(int i=0; i<ataque.size(); i++){
+            if(i%2==0)
+                arquivo << ataque[i] << "  ";
+            else
+                arquivo << ataque[i] << endl;
+        }
+        arquivo.close();
+    }
+}
+
 bool Rainhas::checarColuna() {
+    bool funciona=1;
+    string atacando= "";
     for (int num = 0; num < 8; num++) {
+        int cont=0;
         int contaRainhas = 0;
         for (auto i : tabuleiro) {
             if (i[num] == '1') {
+                if (contaRainhas >= 1)
+                    ataque.push_back(atacando);
+                atacando = to_string(cont) + "," + to_string(num);
                 contaRainhas++;
             }
+            cont++;
         }
         if (contaRainhas > 1) {
-            return false;
+            ataque.push_back(atacando);
+            funciona = false;
         }
+        }
+        return funciona;
     }
-    return true;
-}
 
 bool Rainhas::checarLinha() {
     for (auto i : tabuleiro) {
