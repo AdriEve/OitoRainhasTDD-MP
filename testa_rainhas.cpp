@@ -43,3 +43,9 @@ TEST_CASE("Teste 7 -Caso correto") {
     Rainhas t7(tabuleiro);
     assert(t7.solucao() == 1);
 }// passou nos testes
+
+TEST_CASE("Teste 8 - Duas damas diagonal esquerda") {
+    vector<string> tabuleiro = {"01000000", "00000001","10000000", "00001000", "00010000", "00000010", "00000100", "00100000"};
+    Rainhas t8(tabuleiro);
+    assert(t8.solucao() == 0);
+}
